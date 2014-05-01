@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 # bin/compile <build-dir> <cache-dir> <env-dir>
+set -x 
 
 install_ext () {
     local ext=$1
@@ -24,9 +25,9 @@ install_ext () {
 }
 
 # fail hard
-set -o pipefail
+#set -o pipefail
 # fail harder
-set -eu
+#set -eu
 # move hidden files too, just in case
 shopt -s dotglob
 
